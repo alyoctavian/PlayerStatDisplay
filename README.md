@@ -29,6 +29,7 @@ These will be the values assigned in the inspector:
 ![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/ddcc9f7d-44a9-4ad7-b32d-41c03b48d537)
 
 For the mask to adjust correctly, you need the OuterImage and Inner image to overlap perfectly.
+
 Setting the borders in the Sprite Editor is Necessary so that padding is calculated correctly.
 
 ![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/d6aed131-e62f-42b3-9007-99ef6f55ea55)
