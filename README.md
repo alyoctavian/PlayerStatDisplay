@@ -1,6 +1,7 @@
 # Player Stat Display
 
 Controls the UI display of player stats such as Health and Mana.
+
 Smoothly adjust the text over a period of time and adjusts the fill for the image.
 
 Setup:
