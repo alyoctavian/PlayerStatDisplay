@@ -248,16 +248,20 @@ public class PlayerStatDisplay : MonoBehaviour
     /// <returns>The created pulsating animation sequence.</returns>
     private Sequence PulsateSequence()
     {
-        Sequence heartSequence = DOTween.Sequence();
+        Sequence pulsateSequence = DOTween.Sequence();
 
-        heartSequence.Append(m_valueText.transform.DOScale(new Vector3(m_pulsateScale, m_pulsateScale, 1), m_pulsateTime).SetEase(Ease.OutQuad))
-        .Append(m_valueText.transform.DOScale(Vector3.one, m_pulsateTime).SetEase(Ease.OutQuad))
-        .SetLoops(m_pulsateLoops, LoopType.Restart)
-        .OnKill(() =>
-        {
-            m_valueText.transform.DOScale(Vector3.one, m_pulsateTime * 2).SetEase(Ease.OutQuad);
-        });
+        pulsateSequence.Append(m_valueText.transform.DOScale(new Vector3(m_pulsateScale, m_pulsateScale, 1), m_pulsateTime).SetEase(Ease.OutQuad))
+                        .Join(m_valueText.DOColor(m_pulsateColor, m_pulsateTime).SetEase(Ease.OutQuad))
+                        .Append(m_valueText.transform.DOScale(Vector3.one, m_pulsateTime).SetEase(Ease.OutQuad))
+                        .Join(m_valueText.DOColor(m_defaultColor, m_pulsateTime).SetEase(Ease.OutQuad))
+                        .SetLoops(m_pulsateLoops, LoopType.Restart)
+                        .OnKill(() =>
+                        {
+                            m_valueText.transform.DOScale(Vector3.one, m_pulsateTime * 2).SetEase(Ease.OutQuad);
 
-        return heartSequence;
+                            m_valueText.DOColor(m_defaultColor, m_pulsateTime * 2).SetEase(Ease.OutQuad);
+                        });
+
+        return pulsateSequence;
     }
 }
