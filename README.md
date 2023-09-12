@@ -4,7 +4,11 @@ Controls the UI display of player stats such as Health and Mana.
 
 Smoothly adjust the text over a period of time and adjusts the fill for the image.
 
+![HealthUIGif](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/7db5e0e4-1856-4fdf-bd0a-157f0cfd6a74)
+
 Setup:
+
+Needed Package: [DoTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
 
 For this script to work accordingly, you need to create a prefab with the following:
 
