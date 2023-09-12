@@ -1,6 +1,7 @@
 # Player Stat Display
 
 Controls the UI display of player stats such as Health and Mana.
+Smoothly adjust the text over a period of time and adjusts the fill for the image.
 
 Setup:
 
@@ -25,3 +26,9 @@ The RectMask and InnerImage UI objects should stretch to cover their parents ful
 These will be the values assigned in the inspector:
 
 ![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/ddcc9f7d-44a9-4ad7-b32d-41c03b48d537)
+
+For the mask to adjust correctly, you need the OuterImage and Inner image to overlap perfectly.
+Setting the borders in the Sprite Editor is Necessary so that padding is calculated correctly.
+
+![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/d6aed131-e62f-42b3-9007-99ef6f55ea55)
+![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/37fbfb38-abf1-43e1-b035-961dc60a9ad0)
