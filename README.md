@@ -34,3 +34,5 @@ Setting the borders in the Sprite Editor is Necessary so that padding is calcula
 
 ![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/d6aed131-e62f-42b3-9007-99ef6f55ea55)
 ![image](https://github.com/alyoctavian/PlayerStatDisplay/assets/33526573/37fbfb38-abf1-43e1-b035-961dc60a9ad0)
+
+To use the methods simply call *SetValues()* from a reference to your Stat UI Object.
